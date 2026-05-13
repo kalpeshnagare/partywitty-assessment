@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 1rem;
+    --bg-app: #EDEBE8;
+    --pink: #FF3CAC;
+    --purple: #6C63FF;
+    --background: #F8F7F5;
+    --foreground: #1A1A1A;
+    --card: #FFFFFF;
+    --card-foreground: #1A1A1A;
+    --popover: #FFFFFF;
+    --popover-foreground: #1A1A1A;
+    --primary: #6C63FF;
+    --primary-foreground: #FFFFFF;
+    --secondary: #F2F0ED;
+    --secondary-foreground: #1A1A1A;
+    --muted: #F2F0ED;
+    --muted-foreground: #888888;
+    --accent: #F2F0ED;
+    --accent-foreground: #1A1A1A;
+    --destructive: #FF5A5A;
+    --border: rgba(0, 0, 0, 0.06);
+    --input: rgba(0, 0, 0, 0.06);
+    --ring: #6C63FF;
+
+    --color-dim-grey-50: #f3f2f2;
+    --color-dim-grey-100: #e6e6e5;
+    --color-dim-grey-200: #cdcdcb;
+    --color-dim-grey-300: #b4b3b1;
+    --color-dim-grey-400: #9b9a97;
+    --color-dim-grey-500: #82817d;
+    --color-dim-grey-600: #686764;
+    --color-dim-grey-700: #4e4d4b;
+    --color-dim-grey-800: #343432;
+    --color-dim-grey-900: #1a1a19;
+    --color-dim-grey-950: #121211;
+
+    --color-carbon-black-50: #f0f3f4;
+    --color-carbon-black-100: #e1e7ea;
+    --color-carbon-black-200: #c4cfd4;
+    --color-carbon-black-300: #a6b7bf;
+    --color-carbon-black-400: #899ea9;
+    --color-carbon-black-500: #6b8694;
+    --color-carbon-black-600: #566b76;
+    --color-carbon-black-700: #405159;
+    --color-carbon-black-800: #2b363b;
+    --color-carbon-black-900: #151b1e;
+    --color-carbon-black-950: #0f1315;
+
+    --color-white-smoke-50: #f3f2f1;
+    --color-white-smoke-100: #e7e6e4;
+    --color-white-smoke-200: #d0ccc8;
+    --color-white-smoke-300: #b8b3ad;
+    --color-white-smoke-400: #a09992;
+    --color-white-smoke-500: #888077;
+    --color-white-smoke-600: #6d665f;
+    --color-white-smoke-700: #524d47;
+    --color-white-smoke-800: #37332f;
+    --color-white-smoke-900: #1b1a18;
+    --color-white-smoke-950: #131211;
+
+    --color-soft-linen-50: #f5f3ef;
+    --color-soft-linen-100: #ebe7e0;
+    --color-soft-linen-200: #d8d0c0;
+    --color-soft-linen-300: #c4b8a1;
+    --color-soft-linen-400: #b0a182;
+    --color-soft-linen-500: #9d8962;
+    --color-soft-linen-600: #7d6e4f;
+    --color-soft-linen-700: #5e523b;
+    --color-soft-linen-800: #3f3727;
+    --color-soft-linen-900: #1f1b14;
+    --color-soft-linen-950: #16130e;
+
+    --color-lavender-50: #f0eff5;
+    --color-lavender-100: #e1dfec;
+    --color-lavender-200: #c3bfd9;
+    --color-lavender-300: #a59fc6;
+    --color-lavender-400: #8780b3;
+    --color-lavender-500: #69609f;
+    --color-lavender-600: #544d80;
+    --color-lavender-700: #3f3960;
+    --color-lavender-800: #2a2640;
+    --color-lavender-900: #151320;
+    --color-lavender-950: #0f0d16;
+  }
+
+  * {
+    @apply border-app-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-app-bg text-app-dark font-sans;
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar for desktop */
+  @media (min-width: 1024px) {
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.15);
+      border-radius: 3px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-xl rounded-3xl shadow-pw;
+  }
+
+  .glass-card-strong {
+    @apply bg-white/85 backdrop-blur-2xl rounded-3xl shadow-pw-md;
+  }
+
+  .gradient-btn {
+    @apply bg-pw-gradient text-white font-bold rounded-full px-6 py-3.5 text-[15px] shadow-pw-pink transition-all duration-200 hover:shadow-pw-pink-lg hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .purple-btn {
+    @apply bg-pw-purple-light hover:bg-pw-purple text-white font-bold rounded-full px-7 py-3.5 text-[15px] shadow-pw-purple transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-pw-lg hover:-translate-y-0.5;
+  }
+
+  .tap-highlight {
+    @apply transition-transform duration-100 active:scale-95;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  .safe-top {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+}
+
+/* Scan ring animation for face verification */
+.scan-ring {
+  animation: scanRotate 3s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes scanRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Shimmer loading effect */
+.shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
