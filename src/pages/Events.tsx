@@ -40,13 +40,13 @@ export const EventsPage = () => {
           <div className="flex items-center gap-3 bg-white/70 backdrop-blur rounded-full shadow-pw p-2 pr-4 w-full lg:w-auto">
             <div className="p-[2px] rounded-full bg-pw-gradient">
               <img
-                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&q=80"
+                src="https://res.cloudinary.com/debrimebw/image/upload/image-1_ndt9z7"
                 className="w-10 h-10 rounded-full object-cover border-2 border-white"
                 alt=""
               />
             </div>
             <div className="leading-tight">
-              <div className="text-[13px] font-bold text-app-dark">Alen Markram</div>
+              <div className="text-[13px] font-bold text-app-dark">Kalpesh Nagare</div>
               <button
                 type="button"
                 className="bg-pw-gradient text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full mt-0.5"

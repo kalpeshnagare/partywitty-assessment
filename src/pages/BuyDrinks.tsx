@@ -40,13 +40,13 @@ export const BuyDrinksPage = () => {
             >
               <div className="p-[2px] rounded-full bg-pw-gradient">
                 <img
-                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&q=80"
+                  src="https://res.cloudinary.com/debrimebw/image/upload/image-1_ndt9z7"
                   className="w-12 h-12 rounded-full object-cover border-2 border-white"
                   alt=""
                 />
               </div>
               <div className="flex-1">
-                <div className="font-bold text-app-dark">Alen Markram</div>
+                <div className="font-bold text-app-dark">Kalpesh Nagare</div>
               </div>
               <button
                 type="button"

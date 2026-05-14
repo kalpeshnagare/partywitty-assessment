@@ -125,7 +125,7 @@ export const FeedPage = () => {
               <div className="flex flex-col items-center text-center">
                 <div className="p-[3px] rounded-full bg-pw-gradient">
                   <img
-                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80"
+                    src="https://res.cloudinary.com/debrimebw/image/upload/image-1_ndt9z7"
                     className="w-[72px] h-[72px] rounded-full object-cover border-2 border-white"
                     alt="me"
                   />

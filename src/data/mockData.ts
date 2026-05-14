@@ -10,11 +10,11 @@ import type {
 
 export const currentUser: User = {
   id: 1,
-  name: "Zeeshan Ahmad",
-  photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80",
+  name: "Kalpesh Nagare",
+  photo: "https://res.cloudinary.com/debrimebw/image/upload/image-1_ndt9z7",
   verified: false,
   company: "Indus Global Pvt Ltd",
-  role: "Admin",
+  role: "Software Engineer",
 };
 
 export const profiles: Profile[] = [
